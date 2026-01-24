@@ -28,20 +28,22 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/global-star-bg.css">
+  <link rel="stylesheet" href="assets/css/images-zindex.css">
 
 </head>
 
 <body>
+  <div id="stars-bg">
+    <div class="stars stars-small"></div>
+    <div class="stars stars-medium"></div>
+    <div class="stars stars-big"></div>
+  </div>
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <img src="assets/images/logo.png" alt="Basiret Turizm" class="preloader-logo">
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
@@ -86,8 +88,8 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="index.html" class="active">Anasayfa</a></li>
-              <li><a href="#hizmetler">Hizmetler</a></li>
               <li><a href="#turlar">Turlar</a></li>
+              <li><a href="#hizmetler">Hizmetler</a></li>
               <li><a href="#iletisim">İletişim</a></li>
               <li id="call-now"><a href="tel:905459082027"><i class="fa-solid fa-phone"></i> Şimdi Arayın</a></li>
             </ul>
@@ -134,316 +136,95 @@
   </div>
   </div>
 
-  <div id="hizmetler" class="featured section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 offset-lg-4">
-          <div class="section-heading text-center">
-            <h6>Hizmetler</h6>
-            <h2 id="package-h2">Paket İçerikleri</h2>
-          </div>
+<!-- RAMAZAN AYI TURLARI -->
+<div class="properties section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4">
+        <div class="section-heading text-center">
+          <h6 id="turlar">Turlar</h6>
+          <h2>Ramazan Ayı Turları</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="left-image">
-            <img id="mainImage" src="assets/images/1.jpg" alt="">
+    </div>
+    <div class="row">
+
+      <!-- 10 Günlük Umre Paketi -->
+      <div class="col-lg-4 col-md-6">
+        <div class="item sold-out">
+          <a href="javascript:void(0)"><img src="assets/images/7.jpg" alt="10 Günlük Umre Turu"></a>
+          <span class="category category-sold">10 Günlük Tur</span>
+          <span class="sold-out-badge">Kontenjan Dolmuştur</span>
+          <h4><span class="tour-month">Ramazan Ayı Umresi</span></h4>
+          <ul>
+            <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
+            <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
+                Suyu</span></li>
+            <li>Not: <span>Tüm fiyatlar kişi başıdır.</span></li>
+          </ul>
+          <div class="main-button reserved">
+            <a href="javascript:void(0)" class="disabled-link">Rezervasyon Tamamlandı</a>
           </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="true" aria-controls="collapseOne">
-                  Harem-i Şerif & Kâbe
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Harem-i Şerif ve Kâbe, İslam'ın en kutsal mekanlarıdır. Bu özel alanlarda yapılan ibadetler, yüce
-                  Allah'ın katında çok kıymetlidir. Paketlerimizde, bu manevi atmosferi en iyi şekilde yaşayabilmeniz
-                  için geniş rehberlik hizmetleri ve öncelikli ziyaret imkanları sunulmaktadır.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Arafat & Mina
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Arafat ve Mina bölgeleri, Hac ibadetinin temel noktalarıdır. Yolculuğunuz sırasında bu kutsal
-                  alanlarda, rehberlerimiz eşliğinde ibadetlerinizi eksiksiz ve huzur içinde gerçekleştirmeniz için
-                  gerekli tüm düzenlemeler yapılır. Maksimum rahatlık ve kolaylık sağlanır.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Hira & Sevr Mağarası
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Hira ve Sevr Mağaraları, Peygamber Efendimizin (sâlât ve selam onun üzerine olsun) vahiy aldığı önemli
-                  mekanlardır. Turlarımızda mekanları da ziyaret ederek, İslam tarihinin derinliklerine yolculuk
-                  yapabilirsiniz. Profesyonel rehberlerimizle birlikte manevi atmosferi hissederek gezilerinizi
-                  anlamlandırabilirsiniz.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Cennetü’l-Muallâ
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Mekke’de bulunan Cennetü’l-Muallâ, sahabelerin mezarlarının yer aldığı bir kabristandır. Ziyaretimiz
-                  sırasında bu kabristanlığı da ziyaret edip kendisi için hazırlık yaptığımız, Allah yolunda sefere
-                  çıkıp onun rızası için umre yaptığımız, varacağımız bu durağı görüp neden bu topraklarda olduğumuz
-                  tekrar hatırlıyor ve ibret alıyoruz.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  Bagaj Harici Zemzem
-                </button>
-              </h2>
-              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Yolculuk boyunca taze ve temiz Zemzem suyu temin edilir. Bagaj harici özel taşıma imkanları ile Zemzem
-                  suyunuzun güvenle taşınması sağlanır. Bu kutsal suyun manevi bereketini yolculuğunuz boyunca yanınızda
-                  taşıyabilirsiniz.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  Mescid-i Nebevi
-                </button>
-              </h2>
-              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Medine’deki Mescid-i Nebevi, Peygamber Efendimizin (sâlât ve selam onun üzerine olsun) mescididir ve
-                  çok önemli, kutsal bir yerdir. Paketlerimizde, siz misafirlerimize Mescid-i Nebevi’de namaz kılma,
-                  ziyaret turları ve manevi atmosferi yaşama imkanı sunulmaktadır.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSeven">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                  Uhud Şehitliği
-                </button>
-              </h2>
-              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Uhud Şehitliği, İslam tarihindeki önemli bir savaşın anısına yapılmış bir mekandır. Bu ziyaret ile
-                  tarih bilincinizi derinleştirirken, manevi duygularınızı da güçlendirebilirsiniz. Rehberlerimiz
-                  ziyaret boyunca detaylı bilgiler sunmaktadır.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingEight">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                  Kuba Mescidi
-                </button>
-              </h2>
-              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  İslam tarihindeki ilk mescitlerden biri olan Kuba Mescidi, manevi ziyaretlerinizde özel bir yere
-                  sahiptir. Ziyaretçilerimize burada detaylı açıklamalar ve rahat erişim imkanları sunarak anlamlı bir
-                  deneyim yaşatıyoruz.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingNine">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                  Cennetü’l-Baki
-                </button>
-              </h2>
-              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Medine’de bulunan Cennetü’l-Baki kabristanı, pek çok sahabe ve İslam âlimlerinin mezarlarını
-                  barındırır. Misafirlerimizle birlikte bu mekanda kutsal yolculuğumuza veda etmeden önce son bir defa
-                  daha varacağımız durağı hatırlıyor ve kalplerimizi ve amellerimizi düzeltip son durağımıza hazır
-                  olduğumuzdan emin oluyoruz.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                  Bedir Savaşı Alanı
-                </button>
-              </h2>
-              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Tarihin dönüm noktalarından biri olan Bedir Savaşı alanı, ziyaretçilere İslam tarihinin önemli bir
-                  kesitini yerinde görme imkanı verir. Bu alanı ziyaret ederek, manevi ve tarihî bilgi birikiminizi
-                  artırabilirsiniz.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-          <div class="info-table">
-            <ul>
-              <li>
-                <i class="fas fa-solid fa-people-group info-icon"></i>
-                <h4>Kapasite<br><span>Rahatınız için butik ve organize tur grupları.</span></h4>
-              </li>
-              <li>
-                <i class="fas fa-file-contract info-icon"></i>
-                <h4>Sözleşme<br><span>Haklarınızı güvence altına alan şeffaf süreç.</span></h4>
-              </li>
-              <li>
-                <i class="fas fa-money-bill info-icon"></i>
-                <h4>Ödeme<br><span>İhtiyaçlara yönelik kolay ödeme seçenekleri.</span></h4>
-              </li>
-              <li>
-                <i class="fas fa-route info-icon"></i>
-                <h4>Rehberlik<br><span>Yolculuğun her anında rehberlik ve acil destek hizmeti.</span></h4>
-              </li>
-            </ul>
-          </div>
+          <p class="reserved-message">Kontenjan doldu, ilginiz için teşekkür ederiz. Sonraki turlarımız için bizimle iletişim kurunuz.</p>
         </div>
       </div>
+
+      <!-- 15 Günlük Umre Paketi -->
+      <div class="col-lg-4 col-md-6">
+        <div class="item sold-out">
+          <a href="javascript:void(0)"><img src="assets/images/6.jpg" alt="15 Günlük Umre Turu"></a>
+          <span class="category category-sold">15 Günlük Tur</span>
+          <span class="sold-out-badge">Kontenjan Dolmuştur</span>
+          <h4><span class="tour-month">Ramazan Ayı Umresi</span></h4>
+          <ul>
+            <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
+            <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
+                Suyu</span></li>
+            <li>Not: <span>Tüm fiyatlar kişi başıdır.</span></li>
+          </ul>
+          <div class="main-button reserved">
+            <a href="javascript:void(0)" class="disabled-link">Rezervasyon Tamamlandı</a>
+          </div>
+          <p class="reserved-message">Kontenjan doldu, ilginiz için teşekkür ederiz. Sonraki turlarımız için bizimle iletişim kurunuz.</p>
+        </div>
+      </div>
+
+      <!-- 20 Günlük Umre Paketi -->
+      <div class="col-lg-4 col-md-6">
+        <div class="item sold-out">
+          <a href="javascript:void(0)"><img src="assets/images/4.jpg" alt="20 Günlük Umre Turu"></a>
+          <span class="category category-sold">30 Günlük Tur</span>
+          <span class="sold-out-badge">Kontenjan Dolmuştur</span>
+          <h4><span class="tour-month">Ramazan Ayı Umresi</span></h4>
+          <ul>
+            <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
+            <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
+                Suyu</span></li>
+            <li>Not: <span>Tüm fiyatlar kişi başıdır.</span></li>
+          </ul>
+          <div class="main-button reserved">
+            <a href="javascript:void(0)" class="disabled-link">Rezervasyon Tamamlandı</a>
+          </div>
+          <p class="reserved-message">Kontenjan doldu, ilginiz için teşekkür ederiz. Sonraki turlarımız için bizimle iletişim kurunuz.</p>
+        </div>
+      </div>
+
     </div>
   </div>
+</div>
 
-  <div class="section best-deal">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="section-heading">
-            <h6>Hizmetler</h6>
-            <h2>Geziler</h2>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="tabs-content">
-            <div class="row">
-              <div class="nav-wrapper">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="mekke-tab" data-bs-toggle="tab" data-bs-target="#mekke"
-                      type="button" role="tab" aria-controls="mekke" aria-selected="true">Mekke</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="medine-tab" data-bs-toggle="tab" data-bs-target="#medine" type="button"
-                      role="tab" aria-controls="medine" aria-selected="false">Medine</button>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="mekke" role="tabpanel" aria-labelledby="mekke-tab">
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Ziyaret Noktası <span>Harem-i Şerif & Kâbe</span></li>
-                          <li>Ziyaret Noktası <span>Arafat & Mina</span></li>
-                          <li>Ziyaret Noktası <span>Hira & Sevr Mağarası</span></li>
-                          <li>Ziyaret Noktası <span>Cennetü’l-Muallâ</span></li>
-                          <li>Özel İkram <span>Bagaj Harici Zemzem</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <img class="border-img" src="assets/images/2.jpg" alt="Mekke Ziyareti">
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>Mekke Ziyareti</h4>
-                      <p>Ziyaret programımız, Harem-i Şerif ve Kâbe başta olmak üzere, İslam tarihine yön veren birçok
-                        kutsal mekanı kapsamaktadır. Hira Dağı’ndan Sevr Mağarası’na, Arafat’tan Mina’ya kadar unutulmaz
-                        bir manevi yolculuk sizi bekliyor. Kutsal yolculuğunuzun sonunda sizin ve sevdiklerinizin
-                        faydalanabileceği bir şifa vesilesi olsun diye uçak bagaj hakkınıza ek olarak zemzem suyu hediye
-                        ediyoruz.</p>
-                      <div class="icon-button">
-                        <a href="tel:905459082027"><i class="fa-solid fa-phone"></i> Bilgi Al</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<!-- AYRAÇ -->
+<div class="section-divider-logo">
+  <span>
+</div>
 
-                <div class="tab-pane fade" id="medine" role="tabpanel" aria-labelledby="medine-tab">
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Ziyaret Noktası <span>Mescid-i Nebevi</span></li>
-                          <li>Ziyaret Noktası <span>Uhud Şehitliği</span></li>
-                          <li>Ziyaret Noktası <span>Kuba Mescidi</span></li>
-                          <li>Ziyaret Noktası <span>Cennetü’l-Baki</span></li>
-                          <li>Ziyaret Noktası <span>Bedir Savaşı alanı</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <img class="border-img" src="assets/images/3.jpg" alt="Medine Ziyareti">
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>Medine Ziyareti</h4>
-                      <p>Mescid-i Nebevi’nin manevi atmosferinde başlayacak ziyaretimizde; Uhud Şehitliği, Hendek Savaşı
-                        alanı, Gars Kuyusu ve Cennetü’l-Baki Mezarlığı gibi birçok anlamlı durak yer almaktadır. Sahabe
-                        izlerini takip ederek, Medine’nin huzur dolu sokaklarında geçmişe tanıklık edeceksiniz.</p>
-                      <div class="icon-button">
-                        <a href="tel:905459082027"><i class="fa-solid fa-phone"></i> Bilgi Al</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="properties section">
+<div class="properties section">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-lg-4">
             <div class="section-heading text-center">
-              <h6 id="turlar">Turlar</h6>
-              <h2>Öne Çıkan Umre Turlarımız</h2>
+              <h6>Turlar</h6>
+              <h2>Şevval Ayı Turları</h2>
             </div>
           </div>
         </div>
@@ -454,12 +235,10 @@
             <div class="item">
               <a href="https://wa.me/905434014917"><img src="assets/images/7.jpg" alt="10 Günlük Umre Turu"></a>
               <span class="category">10 Günlük Tur</span>
+              <span class="limited-badge">Kontenjan Sınırlı</span>
               <h4><a href="https://wa.me/905434014917"><span class="sub-item">Hemen Ara</span> <br> <br>
-                  Şevval Ayı Umresi & Haziran Ayı Umresi</a></h4>
+                  <span class="tour-month">Şevval Ayı Umresi</span></a></h4>
               <ul>
-                <!-- <li>4 Kişilik Oda: <span>$950</span></li><br>
-                <li>3 Kişilik Oda: <span>$1000</span></li><br>
-                <li>2 Kişilik Oda: <span>$1050</span></li><br> -->
                 <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
                 <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
                     Suyu</span></li>
@@ -476,12 +255,10 @@
             <div class="item">
               <a href="https://wa.me/905434014917"><img src="assets/images/6.jpg" alt="15 Günlük Umre Turu"></a>
               <span class="category">15 Günlük Tur</span>
+              <span class="limited-badge">Kontenjan Sınırlı</span>
               <h4><a href="https://wa.me/905434014917"><span class="sub-item">Hemen Ara</span> <br> <br>
-                  Şevval Ayı Umresi & Haziran Ayı Umresi</a></h4>
+                  <span class="tour-month">Şevval Ayı Umresi</span></a></h4>
               <ul>
-                <!-- <li>4 Kişilik Oda: <span>$1050</span></li><br>
-                <li>3 Kişilik Oda: <span>$1100</span></li><br>
-                <li>2 Kişilik Oda: <span>$1150</span></li><br> -->
                 <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
                 <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
                     Suyu</span></li>
@@ -498,12 +275,10 @@
             <div class="item">
               <a href="https://wa.me/905434014917"><img src="assets/images/4.jpg" alt="20 Günlük Umre Turu"></a>
               <span class="category">20 Günlük Tur</span>
+              <span class="limited-badge">Kontenjan Sınırlı</span>
               <h4><a href="https://wa.me/905434014917"><span class="sub-item">Hemen Ara</span> <br> <br>
-                  Şevval Ayı Umresi & Haziran Ayı Umresi</a></h4>
+                  <span class="tour-month">Şevval Ayı Umresi</span></a></h4>
               <ul>
-                <!-- <li>4 Kişilik Oda: <span>$1150</span></li><br>
-                <li>3 Kişilik Oda: <span>$1200</span></li><br>
-                <li>2 Kişilik Oda: <span>$1250</span></li><br> -->
                 <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
                 <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
                     Suyu</span></li>
@@ -518,6 +293,297 @@
         </div>
       </div>
     </div>
+    
+            <!-- AYRAÇ -->
+            <div class="section-divider-logo">
+              <span>
+            </div>
+
+<!-- HAZIRAN AYI TURLARI -->
+<div class="properties section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4">
+        <div class="section-heading text-center">
+          <h6>Turlar</h6>
+          <h2>Haziran Ayı Turları</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <!-- 10 Günlük Umre Paketi -->
+      <div class="col-lg-4 col-md-6">
+        <div class="item">
+          <a href="https://wa.me/905434014917"><img src="assets/images/7.jpg" alt="10 Günlük Umre Turu"></a>
+          <span class="category">10 Günlük Tur</span>
+          <span class="available-badge">Kontenjan Mevcut</span>
+          <h4><a href="https://wa.me/905434014917"><span class="sub-item">Hemen Ara</span> <br> <br>
+              <span class="tour-month">Haziran Ayı Umresi</span></a></h4>
+          <ul>
+            <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
+            <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
+                Suyu</span></li>
+            <li>Not: <span>Tüm fiyatlar kişi başıdır.</span></li>
+          </ul>
+          <div class="main-button">
+            <a href="https://wa.me/905434014917">Detayları Görüşelim</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 Günlük Umre Paketi -->
+      <div class="col-lg-4 col-md-6">
+        <div class="item">
+          <a href="https://wa.me/905434014917"><img src="assets/images/6.jpg" alt="15 Günlük Umre Turu"></a>
+          <span class="category">15 Günlük Tur</span>
+          <span class="available-badge">Kontenjan Mevcut</span>
+          <h4><a href="https://wa.me/905434014917"><span class="sub-item">Hemen Ara</span> <br> <br>
+              <span class="tour-month">Haziran Ayı Umresi</span></a></h4>
+          <ul>
+            <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
+            <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
+                Suyu</span></li>
+            <li>Not: <span>Tüm fiyatlar kişi başıdır.</span></li>
+          </ul>
+          <div class="main-button">
+            <a href="https://wa.me/905434014917">Detayları Görüşelim</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 20 Günlük Umre Paketi -->
+      <div class="col-lg-4 col-md-6">
+        <div class="item">
+          <a href="https://wa.me/905434014917"><img src="assets/images/4.jpg" alt="20 Günlük Umre Turu"></a>
+          <span class="category">20 Günlük Tur</span>
+          <span class="available-badge">Kontenjan Mevcut</span>
+          <h4><a href="https://wa.me/905434014917"><span class="sub-item">Hemen Ara</span> <br> <br>
+              <span class="tour-month">Haziran Ayı Umresi</span></a></h4>
+          <ul>
+            <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
+            <li>Dâhil Hizmetler: <span>Uçak Biletleri, Vize, Otel, Rehberlik, Yemekler, Ziyaretler, Geziler, Zemzem
+                Suyu</span></li>
+            <li>Not: <span>Tüm fiyatlar kişi başıdır.</span></li>
+          </ul>
+          <div class="main-button">
+            <a href="https://wa.me/905434014917">Detayları Görüşelim</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div id="hizmetler" class="featured section">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 text-center">
+        <div class="section-heading">
+          <h6>Hizmetler</h6>
+          <h2>Paket İçerikleri</h2>
+        </div>
+        <!-- AYRAÇ -->
+        <div class="section-divider-logo">
+          <span></span>
+          <img src="assets/images/logo.png" alt="Basiret Turizm">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- CARD 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-1.jpg" alt="Harem-i Şerif & Kâbe">
+          <h4>Harem-i Şerif & Kâbe</h4>
+          <p>Harem-i Şerif ve Kâbe, İslam'ın en kutsal mekanlarıdır. Bu özel alanlarda yapılan ibadetler, yüce Allah'ın katında çok kıymetlidir. Paketlerimizde, bu manevi atmosferi en iyi şekilde yaşayabilmeniz için geniş rehberlik hizmetleri ve öncelikli ziyaret imkanları sunulmaktadır.</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-2.jpg" alt="Arafat & Mina">
+          <h4>Arafat & Mina</h4>
+          <p>Arafat ve Mina bölgeleri, Hac ibadetinin temel noktalarıdır. Yolculuğunuz sırasında bu kutsal alanlarda, rehberlerimiz eşliğinde ibadetlerinizi eksiksiz ve huzur içinde gerçekleştirmeniz için gerekli tüm düzenlemeler yapılır. Maksimum rahatlık ve kolaylık sağlanır.</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-3.jpg" alt="Hira & Sevr Mağarası">
+          <h4>Hira & Sevr Mağarası</h4>
+          <p>Hira ve Sevr Mağaraları, Peygamber Efendimizin (sâlât ve selam onun üzerine olsun) vahiy aldığı önemli mekanlardır. Turlarımızda mekanları da ziyaret ederek, İslam tarihinin derinliklerine yolculuk yapabilirsiniz. Profesyonel rehberlerimizle birlikte manevi atmosferi hissederek gezilerinizi anlamlandırabilirsiniz.</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-4.jpg" alt="Cennetü'l-Muallâ">
+          <h4>Cennetü’l-Muallâ</h4>
+          <p>Mekke’de bulunan Cennetü’l-Muallâ, sahabelerin mezarlarının yer aldığı bir kabristandır. Ziyaretimiz sırasında bu kabristanlığı da ziyaret edip kendisi için hazırlık yaptığımız, Allah yolunda sefere çıkıp onun rızası için umre yaptığımız, varacağımız bu durağı görüp neden bu topraklarda olduğumuz tekrar hatırlıyor ve ibret alıyoruz.</p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-5.jpg" alt="Bagaj Harici Zemzem">
+          <h4>Bagaj Harici Zemzem</h4>
+          <p>Yolculuk boyunca taze ve temiz Zemzem suyu temin edilir. Bagaj harici özel taşıma imkanları ile Zemzem suyunuzun güvenle taşınması sağlanır. Bu kutsal suyun manevi bereketini yolculuğunuz boyunca yanınızda taşıyabilirsiniz.</p>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-6.jpg" alt="Mescid-i Nebevi">
+          <h4>Mescid-i Nebevi</h4>
+          <p>Medine’deki Mescid-i Nebevi, Peygamber Efendimizin (sâlât ve selam onun üzerine olsun) mescididir ve çok önemli, kutsal bir yerdir. Paketlerimizde, siz misafirlerimize Mescid-i Nebevi’de namaz kılma, ziyaret turları ve manevi atmosferi yaşama imkanı sunulmaktadır.</p>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-7.jpg" alt="Uhud Şehitliği">
+          <h4>Uhud Şehitliği</h4>
+          <p>Uhud Şehitliği, İslam tarihindeki önemli bir savaşın anısına yapılmış bir mekandır. Bu ziyaret ile tarih bilincinizi derinleştirirken, manevi duygularınızı da güçlendirebilirsiniz. Rehberlerimiz ziyaret boyunca detaylı bilgiler sunmaktadır.</p>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-8.jpg" alt="Kuba Mescidi">
+          <h4>Kuba Mescidi</h4>
+          <p>İslam tarihindeki ilk mescitlerden biri olan Kuba Mescidi, manevi ziyaretlerinizde özel bir yere sahiptir. Ziyaretçilerimize burada detaylı açıklamalar ve rahat erişim imkanları sunarak anlamlı bir deneyim yaşatıyoruz.</p>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-9.jpg" alt="Cennetü'l-Baki">
+          <h4>Cennetü’l-Baki</h4>
+          <p>Medine’de bulunan Cennetü’l-Baki kabristanı, pek çok sahabe ve İslam âlimlerinin mezarlarını barındırır. Misafirlerimizle birlikte bu mekanda kutsal yolculuğumuza veda etmeden önce son bir defa daha varacağımız durağı hatırlıyor ve kalplerimizi ve amellerimizi düzeltip son durağımıza hazır olduğumuzdan emin oluyoruz.</p>
+        </div>
+      </div>
+      <!-- CARD 10 -->
+      <div class="col-lg-4 col-md-6 mb-4 single-center-card">
+        <div class="service-card">
+          <img src="assets/images/hizmetler/hizmet-10.jpg" alt="Bedir Savaşı Alanı">
+          <h4>Bedir Savaşı Alanı</h4>
+          <p>Tarihin dönüm noktalarından biri olan Bedir Savaşı alanı, ziyaretçilere İslam tarihinin önemli bir kesitini
+            yerinde görme imkanı verir. Bu alanı ziyaret ederek, manevi ve tarihî bilgi birikiminizi artırabilirsiniz.</p>
+        </div>
+      </div>
+      
+      </div>
+  </div>
+</div>
+
+
+<div class="section best-deal">
+  <div class="container">
+
+    <!-- BAŞLIK -->
+    <div class="row mb-5 justify-content-center text-center">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h6>Hizmetler</h6>
+          <h2>Geziler</h2>
+        </div>
+        <!-- AYRAÇ -->
+        <div class="section-divider-logo">
+          <span></span>
+          <img src="assets/images/logo.png" alt="Basiret Turizm">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEKKE -->
+    <div class="tour-card fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-3">
+          <h4>Mekke Ziyareti</h4>
+          <p>
+            Ziyaret programımız, Harem-i Şerif ve Kâbe başta olmak üzere, İslam tarihine yön veren birçok kutsal mekanı kapsamaktadır. Hira Dağı’ndan Sevr Mağarası’na, Arafat’tan Mina’ya kadar unutulmaz bir manevi yolculuk sizi bekliyor. Kutsal yolculuğunuzun sonunda sizin ve sevdiklerinizin faydalanabileceği bir şifa vesilesi olsun diye uçak bagaj hakkınıza ek olarak zemzem suyu hediye ediyoruz.
+          </p>
+          <div class="icon-button text-center">
+            <a href="tel:905459082027">
+              <i class="fa-solid fa-phone"></i> Bilgi Al
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <img class="border-img" src="assets/images/2.jpg" alt="Mekke Ziyareti">
+        </div>
+
+        <div class="col-lg-3">
+          <div class="info-table">
+            <ul>
+              <li>Ziyaret Noktası <span>Harem-i Şerif & Kâbe</span></li>
+              <li>Ziyaret Noktası <span>Arafat & Mina</span></li>
+              <li>Ziyaret Noktası <span>Hira & Sevr Mağarası</span></li>
+              <li>Ziyaret Noktası <span>Cennetü'l-Muallâ</span></li>
+              <li>Özel İkram <span>Bagaj Harici Zemzem</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AYRAÇ -->
+    <div class="section-divider-logo">
+      <span></span>
+    </div>
+
+
+    <!-- MEDİNE (TERS LAYOUT) -->
+    <div class="tour-card fade-up">
+      <div class="row align-items-center flex-lg-row-reverse">
+        <div class="col-lg-3">
+
+          <h4>Medine Ziyareti</h4>
+          <p>
+            Mescid-i Nebevi’nin manevi atmosferinde başlayacak ziyaretimizde; Uhud Şehitliği, Hendek Savaşı alanı, Gars Kuyusu ve Cennetü’l-Baki Mezarlığı gibi birçok anlamlı durak yer almaktadır. Sahabe izlerini takip ederek, Medine’nin huzur dolu sokaklarında geçmişe tanıklık edeceksiniz.
+          </p>
+          <div class="icon-button text-center">
+            <a href="tel:905459082027">
+              <i class="fa-solid fa-phone"></i> Bilgi Al
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <img class="border-img" src="assets/images/3.jpg" alt="Medine Ziyareti">
+        </div>
+
+        <div class="col-lg-3">
+          <div class="info-table">
+            <ul>
+              <li>Ziyaret Noktası <span>Mescid-i Nebevi</span></li>
+              <li>Ziyaret Noktası <span>Uhud Şehitliği</span></li>
+              <li>Ziyaret Noktası <span>Kuba Mescidi</span></li>
+              <li>Ziyaret Noktası <span>Cennetü'l-Baki</span></li>
+              <li>Ziyaret Noktası <span>Bedir Savaşı Alanı</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
     <div id="iletisim" class="contact section">
       <div class="container">
@@ -526,6 +592,12 @@
             <div class="section-heading text-center">
               <h6>İletişim</h6>
               <h2>Ofisimize Gelin &amp; İletişime Geçin.</h2>
+            </div>
+            <!-- AYRAÇ -->
+            <div class="section-divider-logo">
+              <span></span>
+              <img src="assets/images/logo.png" alt="Basiret Turizm">
+              <span></span>
             </div>
           </div>
         </div>
@@ -606,18 +678,18 @@
       </div> <!-- container bitişi -->
     </div>
 
-
     <footer>
-      <div class="container">
-        <div class="col-lg-12">
-          <p>
-            Copyright © <span id="copyright-year"></span> Basiret Turizm - Tüm Hakları Saklıdır
-            <br>
-            Design: <a rel="nofollow" href="https://github.com/MertKRC" target="_blank">Mert Karaca</a>
-          </p>
-        </div>
-      </div>
-    </footer>
+  <div class="container">
+    <div class="col-lg-12">
+      <p>
+        Copyright © <span id="copyright-year"></span> Basiret Turizm - Tüm Hakları Saklıdır
+        <br>
+        <span style="font-size: 10px;">Design: <a rel="nofollow" href="https://github.com/MertKRC" target="_blank">Mert Karaca</a></span>
+      </p>
+    </div>
+  </div>
+</footer>
+
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
