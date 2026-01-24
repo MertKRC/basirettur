@@ -1,0 +1,79 @@
+/* ===== STAR BACKGROUND (SEAMLESS FLOW) ===== */
+#stars-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  animation: starMove linear infinite;
+}
+
+/* ⭐ aynı katmanın kopyası → kesintisiz akış */
+.stars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%; /* place a copy directly below the main layer */
+  height: 100%;
+  background-repeat: repeat;
+  background-image: inherit;
+  background-size: inherit;
+}
+
+/* 🔹 Küçük yıldızlar */
+.stars-small {
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, #FFD700 60%, transparent 61%),
+    radial-gradient(1.5px 1.5px at 90px 140px, #FFC83D 60%, transparent 61%),
+    radial-gradient(1.5px 1.5px at 160px 80px, #FFB700 60%, transparent 61%);
+  background-size: 160px 160px;
+  animation-duration: 45s;
+  opacity: 0.9;
+}
+
+/* 🔸 Orta yıldızlar */
+.stars-medium {
+  background-image:
+    radial-gradient(2.5px 2.5px at 60px 100px, #FFD700 60%, transparent 61%),
+    radial-gradient(2.5px 2.5px at 220px 260px, #FFC83D 60%, transparent 61%),
+    radial-gradient(2.5px 2.5px at 360px 300px, #FFB700 60%, transparent 61%);
+  background-size: 260px 260px;
+  animation-duration: 85s;
+  opacity: 0.8;
+}
+
+/* ⭐ Büyük yıldızlar */
+.stars-big {
+  background-image:
+    radial-gradient(3.5px 3.5px at 120px 180px, #FFD700 60%, transparent 61%),
+    radial-gradient(3.5px 3.5px at 320px 380px, #FFC83D 60%, transparent 61%),
+    radial-gradient(3.5px 3.5px at 520px 420px, #FFB700 60%, transparent 61%);
+  background-size: 420px 420px;
+  animation-duration: 130s;
+  opacity: 0.7;
+}
+
+@keyframes starMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+/* 📱 Mobil */
+@media (max-width: 768px) {
+  .stars-big {
+    opacity: 0.5;
+  }
+}
+
+/* ===== Z-INDEX TOP ===== */
+.z-top {
+  position: relative;
+  z-index: 9999 !important;
+}

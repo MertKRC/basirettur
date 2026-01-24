@@ -1,0 +1,24 @@
+/* Ensure all images appear above other elements */
+img{
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* Also target images inside common wrappers */
+.item img, .left-image img, .border-img, .parallax-section img{
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* Ensure header / nav stays above images */
+.header-area,
+.header-sticky,
+.main-nav,
+.sub-header{
+  z-index: 10010 !important;
+}
+
+/* If header is fixed/sticky via other CSS, ensure its stacking is highest */
+header.header-area.header-sticky{
+  z-index: 10010 !important;
+}
