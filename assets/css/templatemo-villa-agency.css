@@ -222,24 +222,21 @@ Pre-loader Style
 --------------------------------------------- 
 */
 
+/* Preloader CSS */
 .js-preloader {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.99);
-  display: -webkit-box;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Beyaz arka plan */
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
+  z-index: 9999;
   opacity: 1;
   visibility: visible;
-  z-index: 9999;
-  -webkit-transition: opacity 0.25s ease;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .js-preloader.loaded {
@@ -248,72 +245,28 @@ Pre-loader Style
   pointer-events: none;
 }
 
-@-webkit-keyframes dot {
-  50% {
-      -webkit-transform: translateX(96px);
-      transform: translateX(96px);
-  }
-}
-
-@keyframes dot {
-  50% {
-      -webkit-transform: translateX(96px);
-      transform: translateX(96px);
-  }
-}
-
-@-webkit-keyframes dots {
-  50% {
-      -webkit-transform: translateX(-31px);
-      transform: translateX(-31px);
-  }
-}
-
-@keyframes dots {
-  50% {
-      -webkit-transform: translateX(-31px);
-      transform: translateX(-31px);
-  }
-}
-
 .preloader-inner {
-  position: relative;
-  width: 142px;
-  height: 40px;
-  background: transparent;
+  text-align: center;
 }
 
-.preloader-inner .dot {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 12px;
-  left: 15px;
-  background: #e0ba2c;
-  border-radius: 50%;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-animation: dot 2.8s infinite;
-  animation: dot 2.8s infinite;
+.preloader-logo {
+  width: 120px;
+  height: auto;
+  animation: breathe 2s ease-in-out infinite;
 }
 
-.preloader-inner .dots {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  margin-top: 12px;
-  margin-left: 31px;
-  -webkit-animation: dots 2.8s infinite;
-  animation: dots 2.8s infinite;
+@keyframes breathe {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.9); }
 }
 
-.preloader-inner .dots span {
-  display: block;
-  float: left;
-  width: 16px;
-  height: 16px;
-  margin-left: 16px;
-  background: #e0ba2c;
-  border-radius: 50%;
+.preloader-text {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #e0ba2c; /* Altın sarısı */
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 
@@ -1143,7 +1096,6 @@ Best Deal Style
 */
 
 .best-deal {
-  background-color: #fafafa;
   padding-top:  100px;
   padding-left: 0px;
   padding-right: 0px;
@@ -2498,3 +2450,714 @@ body {
   justify-content: center;
 }
 
+
+/* ============================= */
+/* UMRE ADIMLARI – PREMIUM CSS   */
+/* ============================= */
+
+/* Kartların scroll ile fade-up animasyonu */
+#umre-adimlari .umre-card {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(32px) scale(0.97);
+  will-change: transform, opacity;
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#umre-adimlari .umre-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ============================= */
+/* SERVICE CARD                  */
+/* ============================= */
+
+#umre-adimlari .service-card {
+  display: flex;
+  gap: 22px;
+  padding: 26px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#umre-adimlari .service-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.14),
+    0 0 0 1px rgba(224,186,44,0.15);
+}
+
+/* ============================= */
+/* STEP ICON                     */
+/* ============================= */
+
+#umre-adimlari .step-icon {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e0ba2c;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Kart hover olduğunda ikonun vurgulanması */
+#umre-adimlari .service-card:hover .step-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 6px rgba(224,186,44,0.18);
+}
+
+/* Sünnetler için ikon */
+#umre-adimlari .sunnet-icon {
+  font-size: 30px;
+}
+
+/* ============================= */
+/* CONTENT & TYPOGRAPHY          */
+/* ============================= */
+
+#umre-adimlari .service-card-content {
+  flex: 1;
+  font-size: 16.4px;
+  line-height: 1.78;
+  color: #222;
+}
+
+/* Altın sarısı başlık */
+#umre-adimlari .gold-title {
+  margin-bottom: 12px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #e0ba2c;
+}
+
+/* ============================= */
+/* LIST STYLE                    */
+/* ============================= */
+
+#umre-adimlari ul {
+  margin-top: 14px;
+  padding-left: 22px;
+  list-style: none;
+}
+
+#umre-adimlari ul li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 26px;
+  font-size: 16.2px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Altın sarısı madde işareti */
+#umre-adimlari ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #e0ba2c;
+}
+
+/* ============================= */
+/* ARABIC TEXT                   */
+/* ============================= */
+
+#umre-adimlari .arabic-text {
+  display: block;
+  margin: 16px 0;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 20px;
+  line-height: 2.2;
+  direction: rtl;
+  text-align: right;
+  color: #000;
+}
+
+/* ============================= */
+/* UMRE NEDİR SECTION            */
+/* ============================= */
+
+#umre-section {
+  padding: 26px;
+  background: #fff;
+  border-radius: 14px;
+}
+
+#umre-section p {
+  font-size: 16.4px;
+  line-height: 1.85;
+}
+
+/* Ayet ve hadis vurgusu */
+#umre-section .highlight {
+  font-weight: 600;
+  color: #e0ba2c;
+}
+
+/* ============================= */
+/* MOBILE                        */
+/* ============================= */
+
+@media (max-width: 768px) {
+  #umre-adimlari .service-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #umre-adimlari .service-card-content {
+    text-align: left;
+    font-size: 16.2px;
+  }
+
+  #umre-adimlari .arabic-text {
+    font-size: 19px;
+    line-height: 2.1;
+  }
+}
+
+/* ============================= */
+/* UMRE BAŞLIK ORTALAMA FIX      */
+/* ============================= */
+
+#umre-adimlari {
+  scroll-margin-top: 100px; /* navbar yüksekliğine göre 80–120 */
+}
+
+/* Sadece Umre başlığı için lokal fix */
+#umre-adimlari .umre-heading-fix {
+  text-align: center;
+}
+
+#umre-adimlari .umre-heading-fix h6,
+#umre-adimlari .umre-heading-fix h2 {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  float: none !important;
+}
+
+/* Logo ayıracı kesin ortala */
+#umre-adimlari .section-divider-logo.umre-heading-fix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+#umre-adimlari .section-divider-logo.umre-heading-fix span {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: rgba(224,186,44,0.45);
+}
+
+
+
+
+/* ===================================================
+   CONTACT – PREMIUM TASARIM (UMRE UYUMLU)
+   =================================================== */
+
+.contact-modern {
+  padding: 90px 0;
+}
+
+/* BAŞLIK */
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h6 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.contact-header h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.contact-header .divider {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.contact-header .divider span {
+  width: 50px;
+  height: 1px;
+  background: #e0ba2c;
+}
+
+.contact-header img {
+  height: 34px;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 26px;
+  margin-bottom: 60px;
+}
+
+/* KART */
+.contact-card {
+  background: #f9f9f9;
+  border-radius: 18px;
+  padding: 34px 28px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: all .35s cubic-bezier(.22,.61,.36,1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ALTIN ÇİZGİ HOVER */
+.contact-card::after {
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height:3px;
+  background:#e0ba2c;
+  transition:.4s ease;
+}
+
+.contact-card:hover::after {
+  width:100%;
+}
+
+/* HOVER EFFECT */
+.contact-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 22px 48px rgba(0,0,0,0.15);
+}
+
+/* İKON */
+.contact-card .icon {
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  background:rgba(224,186,44,.15);
+  color:#e0ba2c;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin:0 auto 18px;
+  transition:.35s ease;
+}
+
+/* İKON ROTATE HOVER */
+.contact-card:hover .icon {
+  transform: rotate(12deg) scale(1.05);
+}
+
+/* BAŞLIK */
+.contact-card h5 {
+  font-size:18px;
+  font-weight:700;
+  color:#111;
+  margin-bottom:10px;
+}
+
+/* METİN */
+.contact-card p {
+  font-size:15.7px;
+  line-height:1.7;
+  color:#444;
+  margin-bottom:20px;
+  flex-grow:1; /* BUTON HİZALAMA */
+}
+
+/* BUTON */
+.contact-card a {
+  display:inline-block;
+  padding:10px 24px;
+  border-radius:30px;
+  background:#e0ba2c;
+  color:#fff;
+  font-size:14.5px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s ease;
+}
+
+.contact-card a:hover {
+  background:#caa61f;
+  transform:scale(1.05);
+}
+
+/* HARİTA */
+.contact-map {
+  width:100%;
+  height:460px;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 18px 38px rgba(0,0,0,0.15);
+}
+
+/* FADE UP ANİMASYON */
+.fade-up {
+  opacity:0;
+  transform:translateY(45px);
+  transition:all .9s cubic-bezier(.22,.61,.36,1);
+}
+
+.fade-up.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .contact-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:768px){
+  .contact-grid{grid-template-columns:1fr;}
+  .contact-header h2{font-size:28px;}
+  .contact-map{height:360px;}
+}
+
+/* ============================= */
+/* GLOBAL GIRIH LINE PATTERN     */
+/* ============================= */
+
+body {
+  position: relative;
+  background-color: #f9f7f3;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23c9a24d' stroke-width='0.7' opacity='0.07'%3E%3Cpath d='M70 0 L140 70 L70 140 L0 70 Z'/%3E%3Cpath d='M35 35 L105 35 L105 105 L35 105 Z'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-repeat: repeat;
+  background-size: 160px 160px;
+  pointer-events: none;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Başlık ve divider */
+#bizden-kareler .section-heading {
+  text-align: center;
+}
+
+#bizden-kareler .section-heading h6,
+#bizden-kareler .section-heading h2 {
+  margin: 0 auto;
+}
+
+#bizden-kareler .section-divider-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 20px;
+}
+
+#bizden-kareler .section-divider-logo span {
+  flex: 1;
+  max-width: 100px;
+  height: 1px;
+  background: rgba(0,0,0,0.06);
+}
+
+/* Kart tasarımı */
+.bk-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.bk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.bk-card:hover .bk-content h4 {
+  color: #e0ba2c;
+}
+
+/* Media */
+.bk-media {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+.bk-media img,
+.bk-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Card content */
+.bk-content {
+  padding: 16px 14px;
+}
+
+.bk-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.bk-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .col-lg-6 {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-lg-6, .col-md-6 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+
+  .bk-media {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* ============================= */
+/* TÜRSAB YETKİLİ ACENTA BÖLÜMÜ */
+/* ============================= */
+
+.tursab-section {
+  padding: 20px 0;
+}
+
+.tursab-card {
+  border: 1px solid rgba(224, 186, 44, 0.6);
+  border-radius: 14px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tursab-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+/* Logolar */
+.tursab-logos {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tursab-logo {
+  max-width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* Açıklama */
+.tursab-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* TÜRSAB link / buton */
+.tursab-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #e0ba2c;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.tursab-link:hover {
+  background: #c9a826;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tursab-card {
+    padding: 24px 16px;
+  }
+
+  .tursab-card p {
+    font-size: 15px;
+  }
+
+  .tursab-logo {
+    max-width: 120px;
+  }
+
+  .tursab-logos {
+    gap: 20px;
+  }
+}
+
+
+/* ============================= */
+/* TUR & TOUR CARD – MOBİL ORTALAMA */
+/* ============================= */
+
+@media (max-width: 767px) {
+
+  /* .properties içindeki row’ları stack et ve ortala */
+  .properties .row,
+  .tour-card .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .properties kart kolonları mobilde full-width ve ortalanmış */
+  .properties .col-md-6,
+  .properties .col-lg-4 {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* .tour-card kolonları mobilde stack ve ortala */
+  .tour-card .col-lg-3,
+  .tour-card .col-lg-6,
+  .tour-card .col-lg-3:last-child {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  /* .properties içindeki görseller ortala */
+  .properties .item img,
+  .tour-card img.border-img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Kart içindeki buton ve bağlantılar ortalanmış */
+  .properties .item .main-button,
+  .tour-card .icon-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Kart içindeki listeyi ortala */
+  .properties .item ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .properties .item ul li {
+    margin-bottom: 6px;
+  }
+
+  /* Category ve badge ortala */
+  .properties .item .category,
+  .properties .item .limited-badge,
+  .properties .item .available-badge {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  /* Başlık linkleri ortala */
+  .properties .item h4 a {
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* Tour-card içindeki h4 ve p ortala */
+  .tour-card .col-lg-3 h4,
+  .tour-card .col-lg-3 p {
+    text-align: center;
+  }
+}
+
+/* ===== ÖZEL: Şevval ve Haziran Turları Başlık Ortalaması ===== */
+.properties > .container > .row.justify-content-center {
+  justify-content: center !important; /* Flex ile ortala */
+}
+
+.properties > .container > .row.justify-content-center > .col-lg-4 {
+  flex: 0 0 auto !important; /* Col genişliğini içeriğe göre ayarla */
+  max-width: 100% !important; /* Offset etkisini kır */
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.properties .section-heading.text-center {
+  text-align: center !important; /* Başlık içeriğini ortala */
+}

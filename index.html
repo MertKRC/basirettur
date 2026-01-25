@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/global-star-bg.css">
   <link rel="stylesheet" href="assets/css/images-zindex.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
+  
 
 </head>
 
@@ -41,9 +44,10 @@
   </div>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+  <div class="js-preloader" id="js-preloader">
     <div class="preloader-inner">
-      <img src="assets/images/logo.png" alt="Basiret Turizm" class="preloader-logo">
+      <img src="assets/images/logo.png" alt="Logo" class="preloader-logo">
+      <div class="preloader-text" id="preloader-text">Sizin için en uygun paketlerimizi düzenliyoruz.</div>
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
@@ -90,6 +94,7 @@
               <li><a href="index.html" class="active">Anasayfa</a></li>
               <li><a href="#turlar">Turlar</a></li>
               <li><a href="#hizmetler">Hizmetler</a></li>
+              <li><a href="#umre-adimlari">Rehber</a></li>
               <li><a href="#iletisim">İletişim</a></li>
               <li id="call-now"><a href="tel:905459082027"><i class="fa-solid fa-phone"></i> Şimdi Arayın</a></li>
             </ul>
@@ -136,6 +141,37 @@
   </div>
   </div>
 
+<!-- TÜRSAB PLAKETİ BÖLÜMÜ -->
+
+<!-- <section id="tursab" class="featured section tursab-section">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <div class="tursab-card"> -->
+
+          <!-- LOGOLAR -->
+          <!-- <div class="tursab-logos">
+            <img src="assets/images/logo.png" alt="Basiret Turizm" class="tursab-logo">
+            <img src="assets/images/tursab-logo.png" alt="TÜRSAB Yetkili Acenta" class="tursab-logo">
+          </div> -->
+
+          <!-- AÇIKLAMA -->
+          <!-- <p>
+            Basiret Turizm, TÜRSAB yetkili acentasıdır ve resmi izinlerle Umre ve Hac organizasyonları düzenlemektedir.
+          </p> -->
+
+          <!-- TÜRSAB SORGULAMA -->
+          <!-- <a href="https://www.tursab.org.tr/tr/uyeler/uyelik-sorgulama" target="_blank" class="tursab-link">
+            TÜRSAB Yetkili Acenta Sorgula
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
 <!-- RAMAZAN AYI TURLARI -->
 <div class="properties section">
   <div class="container">
@@ -147,14 +183,14 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
 
       <!-- 10 Günlük Umre Paketi -->
       <div class="col-lg-4 col-md-6">
         <div class="item sold-out">
           <a href="javascript:void(0)"><img src="assets/images/7.jpg" alt="10 Günlük Umre Turu"></a>
           <span class="category category-sold">10 Günlük Tur</span>
-          <span class="sold-out-badge">Kontenjan Doldu</span>
+          <span class="sold-out-badge">Kontenjan Dolmuştur</span>
           <h4><span class="tour-month">Ramazan Ayı Umresi</span></h4>
           <ul>
             <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
@@ -174,7 +210,7 @@
         <div class="item sold-out">
           <a href="javascript:void(0)"><img src="assets/images/6.jpg" alt="15 Günlük Umre Turu"></a>
           <span class="category category-sold">15 Günlük Tur</span>
-          <span class="sold-out-badge">Kontenjan Doldu</span>
+          <span class="sold-out-badge">Kontenjan Dolmuştur</span>
           <h4><span class="tour-month">Ramazan Ayı Umresi</span></h4>
           <ul>
             <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
@@ -194,7 +230,7 @@
         <div class="item sold-out">
           <a href="javascript:void(0)"><img src="assets/images/4.jpg" alt="20 Günlük Umre Turu"></a>
           <span class="category category-sold">30 Günlük Tur</span>
-          <span class="sold-out-badge">Kontenjan Doldu</span>
+          <span class="sold-out-badge">Kontenjan Dolmuştur</span>
           <h4><span class="tour-month">Ramazan Ayı Umresi</span></h4>
           <ul>
             <li>Uçuş: <span>İstanbul - Medine/Cidde - İstanbul</span></li>
@@ -220,7 +256,7 @@
 
 <div class="properties section">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-lg-4 offset-lg-4">
             <div class="section-heading text-center">
               <h6>Turlar</h6>
@@ -302,7 +338,7 @@
 <!-- HAZIRAN AYI TURLARI -->
 <div class="properties section">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-lg-4 offset-lg-4">
         <div class="section-heading text-center">
           <h6>Turlar</h6>
@@ -393,7 +429,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row justify-content-center">
       <!-- CARD 1 -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="service-card">
@@ -487,6 +523,95 @@
       </div>
   </div>
 </div>
+
+
+<section id="bizden-kareler" class="featured section bizden-kareler-clean">
+  <div class="container">
+
+    <!-- BAŞLIK -->
+    <div class="row justify-content-center mb-5 umre-steps-heading">
+      <div class="col-lg-6 text-center">
+        <div class="section-heading umre-heading-fix">
+          <h6>Hizmetler</h6>
+          <h2>Mekke ve Medineden Kareler</h2>
+        </div>
+        <div class="section-divider-logo umre-heading-fix">
+          <span></span>
+          <img src="assets/images/logo.png" alt="Basiret Turizm">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KARTLAR -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- KART 1 -->
+      <div class="col-lg-6 col-md-6">
+        <div class="bk-card">
+          <div class="bk-media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/images/bizden-kareler/Mekke-Otel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="bk-content">
+            <h4>Mekke Otellerimiz</h4>
+            <p>Harem’e yürüme mesafesinde, huzurlu ve konforlu konaklama.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- KART 2 -->
+      <div class="col-lg-6 col-md-6">
+        <div class="bk-card">
+          <div class="bk-media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/images/bizden-kareler/Mekke-Gezi.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="bk-content">
+            <h4>Mekke Ziyaretleri</h4>
+            <p>Rehber eşliğinde bilinçli ve sünnete uygun ziyaretler.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- KART 3 -->
+      <div class="col-lg-6 col-md-6">
+        <div class="bk-card">
+          <div class="bk-media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/images/bizden-kareler/Medine-Otel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="bk-content">
+            <h4>Medine Otellerimiz</h4>
+            <p>Mescid-i Nebevî çevresinde sakin ve düzenli ortam.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- KART 4 -->
+      <div class="col-lg-6 col-md-6">
+        <div class="bk-card">
+          <div class="bk-media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/images/bizden-kareler/Arafat-Gezi.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="bk-content">
+            <h4>Arafat Ziyareti</h4>
+            <p>Peygamber şehrinde huşu dolu manevi duraklar.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
 
 
 <div class="section best-deal">
@@ -584,14 +709,222 @@
   </div>
 </div>
 
+<div id="umre-adimlari" class="featured section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 umre-steps-heading">
+      <div class="col-lg-6">
+        <div class="section-heading umre-heading-fix">
+          <h6>Rehber</h6>
+          <h2>Umre Rehberi</h2>
+        </div>
+        <div class="section-divider-logo umre-heading-fix">
+          <span></span>
+          <img src="assets/images/logo.png" alt="Basiret Turizm">
+          <span></span>
+        </div>
+      </div>
+    </div>
 
-    <div id="iletisim" class="contact section">
+
+
+    <div class="row">
+      <!-- Umre Nedir -->
+      <div class="col-12 mb-4 umre-card visible">
+        <div class="service-card d-flex flex-md-row flex-column align-items-start">
+          <div class="step-icon">?</div>
+          <div id="umre-section" class="service-card-content">
+            <h4 class="gold-title">Umre Nedir?</h4>
+            <p>
+              Umre, Müslümanların Allah’a yakınlaşmak, günahlardan arınmak ve ibadetlerini yerine getirmek için yaptığı kutsal bir
+              ibadettir.<br><br>
+
+              Kuran-ı Kerim’de Yüce Allah şöyle buyurur:
+              <em>“Haccı ve Umreyi Allah rızası için tamamlayın.”</em>
+              <span class="highlight">(Bakara, 2:196)</span><br><br>
+
+              Yine Yüce Allah şöyle buyurmaktadır:
+              <em>"Sonra insanların akın ettiği yerden siz de akın edin ve Allah’tan bağışlanma dileyin. Şüphesiz Allah çok
+                bağışlayandır, çok merhamet edendir."</em>
+              <span class="highlight">(Bakara, 2:199)</span><br><br>
+
+              Peygamber Efendimiz <em>(salât ve selam onun üzerine olsun)</em> şöyle buyurmuştur:
+              Ebu Hureyre <em>(Allah ondan razı olsun)</em> şöyle rivayet etmiştir: Rasulullah <em>(salât ve selam onun üzerine
+                olsun)</em> buyurdu:
+              <em>“Umre, diğer umreye kadar işlenen günahlara kefarettir! Mebrur hac ise, onun karşılığı ancak cennettir!”</em>
+              <span class="highlight">(Buhari 1672, Müslim 1349/437)</span><br><br>
+
+              Umre ibadeti ihram giymek, telbiye getirmek, Kâbe etrafında tavaf yapmak, Safa ile Merve arasında Sa’y yapmak ve
+              saçları tıraş veya kısaltmak gibi ritüelleri içerir.
+              Bu ritüellerin her biri, kulun tevazu içinde Allah’a yönelmesini, O’nu zikretmesini ve O’na itaatini
+              gösterir.<br><br>
+
+              Tavaf sırasında Müslümanlar Kâbe’yi dolaşır, Haceru’l Esved’e işaret eder ve Allah’ı yüceltir.
+              Sa’y yaparken, Hacer ve İsmail’in Safa ve Merve arasında yaşadığı sıkıntıyı ve Rabbine olan muhtaçlığı hatırlar.<br><br>
+
+              Umre yapan kişi bu ibadetle hem manevi arınma yaşar hem de Allah’a olan bağlılığını güçlendirir.
+              Bu ibadet, kulun tevhid inancını pekiştirir, nefsi terbiye eder ve Allah’ın emirlerine uymanın güzelliğini gösterir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adım 01 -->
+      <div class="col-12 mb-4 umre-card">
+        <div class="service-card d-flex flex-md-row flex-column align-items-start">
+          <div class="step-icon">1</div>
+          <div class="service-card-content">
+            <h4 class="gold-title">İhram</h4>
+            <p>
+              Umreye başlamadan önce kişi ihrama girer. Bunun için önce temizlenir, mümkünse güzel kokular sürer ve ihram
+              elbiselerini giyer. Ardından niyet ederek
+              <em>“Lebbeyk Allahumme bi Umre”</em> der ve telbiye getirir:
+            </p>
+
+            <span class="arabic-text" lang="ar" dir="rtl">
+              لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ،
+              إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ
+            </span>
+
+            <p>
+              Telbiye, ihrama girişten tavafa başlayana kadar yapılır. Telbiye getirirken sesini yükseltmek sünnettir;
+              kadınlar mahremlerinin duyacağı şekilde, erkekler ise yüksek sesle okuyabilir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adım 02 -->
+      <div class="col-12 mb-4 umre-card">
+        <div class="service-card d-flex flex-md-row flex-column align-items-start">
+          <div class="step-icon">2</div>
+          <div class="service-card-content">
+            <h4 class="gold-title">Tavaf</h4>
+            <p>
+              Kâbe etrafında, saat yönünün tersine doğru yedi tur dolaşmak tavaftır.
+              Tavafa Hacerü’l-Esved hizasından başlanır. Mümkünse kimseye eziyet vermeden
+              Hacerü’l-Esved’e dokunulur; bu mümkün değilse sağ el kaldırılarak selam verilir
+              ve tekbir getirilir.
+            </p>
+
+            <p>
+              Hacerü’l-Esved hizasına her geliş bir tur sayılır. Yedinci tur tamamlandığında
+              Hacerü’l-Esved hizasında tavaf sona erer.
+              Ardından Makam-ı İbrahim’in arkasında iki rek‘at tavaf namazı kılınır.
+            </p>
+
+            <ul>
+              <li>Erkekler ilk üç turda hızlı yürür (remel).</li>
+              <li>Tavaf boyunca sağ omuz açık tutulur (idtiba).</li>
+              <li>İki rek‘at Tavaf Namazı Makam-ı İbrahim’de kılınır.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adım 03 -->
+      <div class="col-12 mb-4 umre-card">
+        <div class="service-card d-flex flex-md-row flex-column align-items-start">
+          <div class="step-icon">3</div>
+          <div class="service-card-content">
+            <h4 class="gold-title">Safa ile Merve Arasında Sa’y</h4>
+            <p>
+              Safa’dan başlanarak Merve’ye doğru yürünür. Erkekler yeşil ışıklar arasında koşabilir, kadınlar normal yürür.
+              Toplam yedi tur tamamlanır.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adım 04 -->
+      <div class="col-12 mb-4 umre-card">
+        <div class="service-card d-flex flex-md-row flex-column align-items-start">
+          <div class="step-icon">4</div>
+          <div class="service-card-content">
+            <h4 class="gold-title">Saç Kısaltma veya Tıraş</h4>
+            <p>
+              Sa’y tamamlandıktan sonra erkekler saçlarını kazıtır veya kısaltır, kadınlar saç uçlarından az miktar keser.
+              Bu işlemle Umre tamamlanır.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Umrenin Sünnetleri -->
+      <div class="col-12 mb-4 umre-card">
+        <div class="service-card d-flex flex-md-row flex-column align-items-start">
+          <div class="step-icon sunnet-icon">📖</div>
+          <div class="service-card-content">
+            <h4 class="gold-title">Umrenin Sünnetleri</h4>
+
+            <p class="sunnet-note">
+              <em>Aşağıda yer alan uygulamalar, Umre ibadetinin sünnetleri arasındadır.</em>
+            </p>
+
+            <ul class="sunnet-list">
+              <li>İhrama girerken temizlenmek, gusül abdesti almak ve güzel kokular sürmek.</li>
+
+              <li>
+                Telbiyeyi ihrama girdikten sonra bol bol getirmek;
+                erkeklerin bunu yüksek sesle, kadınların ise kendi işiteceği şekilde yapması.
+              </li>
+
+              <li>
+                Tavaf sırasında erkeklerin ilk üç turda adımlarını kısa ve canlı tutarak
+                hızlı yürümesi (remel).
+              </li>
+
+              <li>
+                Tavafa başlarken ve tavaf süresince sağ omzun açık olacak şekilde
+                ihramın üst parçasını sol omuzdan geçirmek (idtiba).
+              </li>
+
+              <li>
+                Tavaf esnasında Rüknü’l-Yemânî ile Hacerü’l-Esved arasında şu duayı okumak:
+                <span class="arabic-text" lang="ar" dir="rtl">
+                  رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً
+                  وَقِنَا عَذَابَ النَّارِ
+                </span>
+              </li>
+
+              <li>
+                Tavaf bittikten sonra Makam-ı İbrahim’in arkasında iki rek‘at tavaf namazı kılmak.
+              </li>
+
+              <li>
+                Sa’y esnasında erkeklerin yeşil ışıklar arasında koşar adım yürümesi,
+                kadınların ise normal yürüyüşle devam etmesi.
+              </li>
+
+              <li>
+                Sa’y tamamlandıktan sonra erkeklerin saçlarını tamamen kazıtmaları, bu mümkün değilse kısaltmaları.
+                Saçı tamamen kazıtmak, kısaltmaktan daha faziletlidir. Nitekim Peygamber Efendimiz
+                <em>(salât ve selam onun üzerine olsun)</em> saçlarını tamamen kesenlere üç defa,
+                kısaltanlara ise bir kere dua etmiştir.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    <section class="contact-modern" id="iletisim">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 offset-lg-4">
-            <div class="section-heading text-center">
+        <!-- BAŞLIK -->
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-6">
+            <div class="section-heading">
               <h6>İletişim</h6>
-              <h2>Ofisimize Gelin &amp; İletişime Geçin.</h2>
+              <h2>Ofisimize Gelin <br>& <br>İletişime Geçin</h2>
             </div>
             <!-- AYRAÇ -->
             <div class="section-divider-logo">
@@ -601,82 +934,55 @@
             </div>
           </div>
         </div>
+    
+        <!-- KARTLAR -->
+        <div class="contact-grid">
+    
+          <div class="contact-card fade-up" style="transition-delay:0.1s;">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h5>Ofisimize Gelin</h5>
+            <p>Hacıhalil Mah. Adliye Cad. Güzeltepe İş Merkezi Kat:2 No:34<br>Gebze / Kocaeli</p>
+            <a href="https://maps.app.goo.gl/GiQdsTNGisuyiKTN6?g_st=aw">Haritada Gör</a>
+          </div>
+    
+          <div class="contact-card fade-up" style="transition-delay:0.2s;">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <h5>Telefon</h5>
+            <p>0545 908 20 27</p>
+            <a href="tel:05459082027">Ara</a>
+          </div>
+    
+          <div class="contact-card fade-up" style="transition-delay:0.3s;">
+            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+            <h5>Whatsapp</h5>
+            <p>0543 401 49 17</p>
+            <a href="https://wa.me/905434014917">Mesaj At</a>
+          </div>
+    
+          <div class="contact-card fade-up" style="transition-delay:0.4s;">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <h5>E-Posta</h5>
+            <p>info@basiretturizm.com</p>
+            <a href="mailto:info@basiretturizm.com">Mail At</a>
+          </div>
+    
+        </div>
+    
+        <!-- HARİTA ALANI (iframe'i buraya koyabilirsin) -->
+        <div class="contact-map fade-up" style="transition-delay:0.5s;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d377.55353819663264!2d29.43660676014873!3d40.79658098387549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1747534386195!5m2!1str!2str"
+            width="100%" height="500px" frameborder="0"
+            style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);" allowfullscreen="">
+          </iframe>
+        </div>
+    
       </div>
-    </div>
+    </section>
 
-    <div class="contact-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div id="map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d377.55353819663264!2d29.43660676014873!3d40.79658098387549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1747534386195!5m2!1str!2str"
-                width="100%" height="500px" frameborder="0"
-                style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"
-                allowfullscreen=""></iframe>
-            </div>
 
-            <div class="row">
-              <div class="col-lg-2"></div>
-              <div class="col-lg-8">
-                <div class="item location d-flex align-items-center">
-                  <i id="location-icon" class="fa-solid fa-location-dot "></i>
-                  <div>
-                    <h6>
-                      <a href="https://maps.app.goo.gl/GiQdsTNGisuyiKTN6?g_st=aw" class="text-decoration-none text-dark d-block">Hacıhalil Mah. Adliye Cad. Güzeltepe İş Merkezi Kat:2 No:34<br>
-                      Gebze / Kocaeli</a>
-                      <span>Ofisimize Gelin</span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2"></div>
-            </div>
 
-            <br>
 
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="item phone d-flex align-items-center">
-                  <i class="fa-solid fa-phone phone-icon"></i>
-                  <div>
-                    <h6 class="mb-0">
-                      <a href="tel:05459082027" class="text-decoration-none text-dark d-block">0545 908 20 27</a>
-                      <span>Telefonla Arayın</span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="item phone d-flex align-items-center">
-                  <i class="fab fa-whatsapp phone-icon"></i>
-                  <div>
-                    <h6 class="mb-0">
-                      <a href="https://wa.me/905434014917" class="text-decoration-none text-dark d-block">0543 401 49 17</a>
-                      <span>Whatsapp'tan Yazın</span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="item email d-flex align-items-center">
-                  <i class="fas fa-envelope email-icon"></i>
-                  <div>
-                    <h6 class="mb-0">
-                      <a href="mailto:info@basiretturizm.com" class="text-decoration-none text-dark d-block">
-                        info@basiretturizm.com
-                      </a>
-                      <span>E-Posta Atın</span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div> <!-- col-lg-12 bitişi -->
-        </div> <!-- row bitişi -->
-      </div> <!-- container bitişi -->
-    </div>
 
     <footer>
   <div class="container">
@@ -693,6 +999,25 @@
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
+     <!-- Scroll JS -->
+<script>
+  // Scroll ile görünür yapma
+  const cards = document.querySelectorAll('.umre-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Tekrar gözlemlemeden kaldır
+      }
+    });
+  }, {threshold: 0.2});
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+
+     <script src="assets/js/preloader.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/isotope.min.js"></script>
@@ -701,10 +1026,10 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/copyright.js"></script>
     <script src="assets/js/image-switcher.js"></script>
+    
 
 </body>
 
 </html>
-
 
 
