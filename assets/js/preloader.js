@@ -1,36 +1,44 @@
-// preloader.js
-
+// preloader.js (Beyaz arka plan, kapanma devre dışı)
 (function() {
-  // Sayfa tamamen yüklendiğinde preloader kapat
-  window.addEventListener('load', function() {
-    var preloader = document.getElementById('js-preloader');
-    if(preloader) {
-      preloader.classList.add('loaded');
-    }
-  });
+  var textElement = document.getElementById("preloader-text");
+  var progressBar = document.getElementById("progress-bar");
+  var progressPercent = document.getElementById("progress-percent");
 
-  // Yazı değişimi ve fade efekti
   var texts = [
-    "Sizin için en uygun paketlerimizi düzenliyoruz.",
-    "Gezilerinizi kolayca planlıyoruz.",
-    "En iyi fiyatları sizin için seçiyoruz.",
-    "Unutulmaz deneyimler için hazırlanıyoruz."
+    "Niyet edildi.",
+    "Hazırlanıyoruz.",
+    "Yola çıkıyoruz.",
+    "Basiret Turizm ile sünnet üzere Umre..."
   ];
 
   var index = 0;
-  var textElement = document.getElementById("preloader-text");
 
+  // Metin değişimi
   if(textElement) {
     setInterval(function() {
-      // Fade out
       textElement.style.opacity = 0;
-
       setTimeout(function() {
         index = (index + 1) % texts.length;
         textElement.textContent = texts[index];
-        // Fade in
         textElement.style.opacity = 1;
-      }, 500); // 0.5s fade out süresi
+      }, 500);
     }, 3000);
   }
+
+  // Gerçek yüklemeye göre progress (kapanma devre dışı)
+  var simulateProgress = 0;
+  var updateProgress = setInterval(function() {
+    var loaded = 0;
+    if(document.readyState === "loading") loaded = 40;
+    else if(document.readyState === "interactive") loaded = 70;
+    else if(document.readyState === "complete") loaded = 100;
+
+    if(simulateProgress < loaded) simulateProgress++;
+    
+    if(progressBar) progressBar.style.width = simulateProgress + '%';
+    if(progressPercent) progressPercent.textContent = simulateProgress + '%';
+
+    // Kapanma devre dışı
+    // if(simulateProgress >= 100 && preloader) preloader.classList.add('loaded');
+  }, 20);
 })();

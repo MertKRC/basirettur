@@ -44,13 +44,18 @@
   </div>
 
   <!-- ***** Preloader Start ***** -->
-  <div class="js-preloader" id="js-preloader">
-    <div class="preloader-inner">
-      <img src="assets/images/logo.png" alt="Logo" class="preloader-logo">
-      <div class="preloader-text" id="preloader-text">Sizin için en uygun paketlerimizi düzenliyoruz.</div>
+<div class="js-preloader" id="js-preloader">
+  <div class="preloader-inner">
+    <img src="assets/images/logo.png" alt="Logo" class="preloader-logo">
+    <div class="preloader-text" id="preloader-text">Sizin için en uygun paketlerimizi düzenliyoruz.</div>
+    <div class="preloader-progress">
+      <div class="progress-bar" id="progress-bar"></div>
+      <div class="progress-percent" id="progress-percent">0%</div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
+</div>
+<!-- ***** Preloader End ***** -->
+
 
   <div class="sub-header">
     <div class="container">
@@ -551,7 +556,7 @@
         <div class="bk-card">
           <div class="bk-media">
             <video autoplay muted loop playsinline>
-              <source src="assets/images/bizden-kareler/mekke-otel.mp4" type="video/mp4">
+              <source src="assets/images/bizden-kareler/Mekke-Otel.mp4" type="video/mp4">
             </video>
           </div>
           <div class="bk-content">
@@ -777,7 +782,7 @@
             <p>
               Umreye başlamadan önce kişi ihrama girer. Bunun için önce temizlenir, mümkünse güzel kokular sürer ve ihram
               elbiselerini giyer. Ardından niyet ederek
-              <em>“Lebbeyk Allahumme bi Umre”</em> der ve telbiye getirir:
+              <em>“Lebbeyke Umraten”</em> der ve telbiye getirir:
             </p>
 
             <span class="arabic-text" lang="ar" dir="rtl">
@@ -809,7 +814,7 @@
             <p>
               Hacerü’l-Esved hizasına her geliş bir tur sayılır. Yedinci tur tamamlandığında
               Hacerü’l-Esved hizasında tavaf sona erer.
-              Ardından Makam-ı İbrahim’in arkasında iki rek‘at tavaf namazı kılınır.
+              Ardından müsaitse Makam-ı İbrahim’in arkasında, değilse müsait bir yerde iki rek‘at tavaf namazı kılınır.
             </p>
 
             <ul>
@@ -896,7 +901,7 @@
               </li>
 
               <li>
-                Sa’y tamamlandıktan sonra erkeklerin saçlarını tamamen kazıtmaları, bu mümkün değilse kısaltmaları.
+                Sa’y tamamlandıktan sonra erkeklerin saçlarını tamamen kazıtmaları, bu mümkün değilse saçın her yerinden eşit şekilde kısaltmaları.
                 Saçı tamamen kazıtmak, kısaltmaktan daha faziletlidir. Nitekim Peygamber Efendimiz
                 <em>(salât ve selam onun üzerine olsun)</em> saçlarını tamamen kesenlere üç defa,
                 kısaltanlara ise bir kere dua etmiştir.
@@ -1015,7 +1020,6 @@
 
   cards.forEach(card => observer.observe(card));
 </script>
-
 
      <script src="assets/js/preloader.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
