@@ -2698,59 +2698,22 @@ body {
 
 
 /* ===================================================
-   CONTACT – PREMIUM TASARIM (UMRE UYUMLU)
+   CONTACT – PREMIUM TASARIM
    =================================================== */
 
 .contact-modern {
   padding: 90px 0;
 }
 
-/* BAŞLIK */
-.contact-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.contact-header h6 {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #777;
-  text-transform: uppercase;
-}
-
-.contact-header h2 {
-  font-size: 34px;
-  font-weight: 700;
-  color: #111111;
-}
-
-.contact-header .divider {
-  margin-top: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-}
-
-.contact-header .divider span {
-  width: 50px;
-  height: 1px;
-  background: #e0ba2c;
-}
-
-.contact-header img {
-  height: 34px;
-}
-
 /* GRID */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 26px;
   margin-bottom: 60px;
 }
 
-/* KART */
+/* CARD */
 .contact-card {
   background: #f9f9f9;
   border-radius: 18px;
@@ -2764,7 +2727,7 @@ body {
   overflow: hidden;
 }
 
-/* ALTIN ÇİZGİ HOVER */
+/* ALT ÇİZGİ */
 .contact-card::after {
   content:"";
   position:absolute;
@@ -2780,18 +2743,17 @@ body {
   width:100%;
 }
 
-/* HOVER EFFECT */
 .contact-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 22px 48px rgba(0,0,0,0.15);
 }
 
-/* İKON */
+/* ICON – HEPSİ ALTIN SARISI */
 .contact-card .icon {
   width:68px;
   height:68px;
   border-radius:50%;
-  background:rgba(224,186,44,.15);
+  background: rgba(224,186,44,.18);
   color:#e0ba2c;
   display:flex;
   align-items:center;
@@ -2801,26 +2763,28 @@ body {
   transition:.35s ease;
 }
 
-/* İKON ROTATE HOVER */
+/* ICON HOVER */
 .contact-card:hover .icon {
   transform: rotate(12deg) scale(1.05);
+  background:#e0ba2c;
+  color:#fff;
 }
 
 /* BAŞLIK */
 .contact-card h5 {
   font-size:18px;
   font-weight:700;
-  color:#111;
   margin-bottom:10px;
+  color:#111;
 }
 
 /* METİN */
 .contact-card p {
-  font-size:15.7px;
-  line-height:1.7;
+  font-size:15.5px;
+  line-height:1.6;
   color:#444;
   margin-bottom:20px;
-  flex-grow:1; /* BUTON HİZALAMA */
+  flex-grow:1;
 }
 
 /* BUTON */
@@ -2841,36 +2805,24 @@ body {
   transform:scale(1.05);
 }
 
-/* HARİTA */
+/* MAP */
 .contact-map {
-  width:100%;
-  height:460px;
   border-radius:18px;
   overflow:hidden;
   box-shadow:0 18px 38px rgba(0,0,0,0.15);
 }
 
-/* FADE UP ANİMASYON */
-.fade-up {
-  opacity:0;
-  transform:translateY(45px);
-  transition:all .9s cubic-bezier(.22,.61,.36,1);
-}
-
-.fade-up.visible {
-  opacity:1;
-  transform:translateY(0);
-}
-
 /* RESPONSIVE */
 @media(max-width:1200px){
-  .contact-grid{grid-template-columns:repeat(2,1fr);}
+  .contact-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
 }
 
 @media(max-width:768px){
-  .contact-grid{grid-template-columns:1fr;}
-  .contact-header h2{font-size:28px;}
-  .contact-map{height:360px;}
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================= */
