@@ -3186,3 +3186,113 @@ body > * {
 .properties .section-heading.text-center {
   text-align: center !important; /* Başlık içeriğini ortala */
 }
+
+/* SSS Bölümü */
+#sss-section {
+  padding: 60px 0;
+}
+
+#sss-section .section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#sss-section .gold-title {
+  color: #e0ba2c;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Wrapper */
+.sss-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Card */
+.sss-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  margin-bottom: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* 🔥 Umre Adımları ile birebir hover */
+.sss-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Soru */
+.sss-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 25px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease; /* 🔹 EKLENDİ */
+}
+
+/* 🔹 Hover olunca başlık altın sarısı */
+.sss-card:hover .sss-question {
+  color: #e0ba2c;
+}
+
+/* Icon */
+.sss-icon {
+  font-size: 24px;
+  color: #e0ba2c;
+  transition: transform 0.3s ease;
+}
+
+/* Cevap */
+.sss-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 25px;
+}
+
+.sss-answer p {
+  padding-bottom: 20px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Aktif */
+.sss-card.active .sss-answer {
+  max-height: 350px;
+}
+
+.sss-card.active .sss-icon {
+  transform: rotate(45deg);
+}
+
+/* 🔹 Açık olan soru başlığı da altın sarısı */
+.sss-card.active .sss-question {
+  color: #e0ba2c;
+}
+
+/* Highlight */
+#sss-section .highlight {
+  color: #e0ba2c;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sss-question {
+    font-size: 16px;
+  }
+}
+
