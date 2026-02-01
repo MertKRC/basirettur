@@ -1117,7 +1117,30 @@
       </div>
     </section>
 
+    <!-- Sosyal Medya Popup -->
+    <div class="popup-overlay" id="socialPopup">
+      <div class="popup">
+        <button class="popup-close" id="popupClose">&times;</button>
 
+        <h4 class="popup-title">Bizi Sosyal Medyada Takip Edin</h4>
+        <p class="popup-text">
+          Umre programlarımız ve güncel paylaşımlarımız için
+          sosyal medya hesaplarımızda buluşalım.
+        </p>
+
+        <div class="popup-buttons">
+          <a href="https://www.instagram.com/basiretturizm/" target="_blank" class="btn-instagram">
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/basiretturizm/" target="_blank" class="btn-facebook">
+            Facebook
+          </a>
+          <a href="https://wa.me/905XXXXXXXXX" target="_blank" class="btn-whatsapp">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -1159,6 +1182,29 @@
       btn.parentElement.classList.toggle("active");
     });
   });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("socialPopup");
+  const popupBox = document.getElementById("popupBox");
+  const closeBtn = document.getElementById("popupClose");
+
+  // Popup aç (örnek: 2 saniye sonra)
+  setTimeout(() => {
+    popup.style.display = "block";
+  }, 2000);
+
+  // Kapatma animasyonu
+  closeBtn.addEventListener("click", () => {
+    popupBox.classList.add("closing");
+
+    setTimeout(() => {
+      popup.style.display = "none";
+      popupBox.classList.remove("closing");
+    }, 400);
+  });
+});
 </script>
 
      <script src="assets/js/preloader.js"></script>

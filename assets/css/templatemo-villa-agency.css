@@ -3296,3 +3296,161 @@ body > * {
   }
 }
 
+/* ============================= */
+/* SOSYAL MEDYA POPUP – FINAL */
+/* ============================= */
+
+/* Overlay – arka plan KARARMAZ */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  display: none;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* ============================= */
+/* POPUP – MASAÜSTÜ (SAĞ ALT) */
+/* ============================= */
+.popup {
+  pointer-events: auto;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 16px;
+  width: 360px;
+  max-width: calc(100% - 40px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+  opacity: 0;
+  animation: popupFadeDesktop 0.5s ease forwards;
+}
+
+/* Kapatma (X) */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #999;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.popup-close:hover {
+  color: #e0ba2c;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Başlık */
+.popup-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #e0ba2c;
+}
+
+/* Metin */
+.popup-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Butonlar */
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Ortak buton */
+.popup-buttons a {
+  text-align: center;
+  padding: 11px 14px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.popup-buttons a:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+/* Instagram */
+.btn-instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+/* Facebook */
+.btn-facebook {
+  background: #1877f2;
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+  background: #25d366;
+}
+
+/* ============================= */
+/* MASAÜSTÜ ANİMASYON */
+/* ============================= */
+@keyframes popupFadeDesktop {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================= */
+/* MOBİL – ALTTA ORTALI */
+/* ============================= */
+@media (max-width: 768px) {
+  .popup {
+    left: 50%;
+    right: auto;
+    bottom: 20px;
+    top: auto;
+
+    width: calc(100% - 30px);
+    max-width: 380px;
+
+    transform: translateX(-50%);
+    animation: popupFadeMobile 0.45s ease forwards;
+  }
+}
+
+/* Mobil animasyon */
+@keyframes popupFadeMobile {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
