@@ -1186,23 +1186,24 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.getElementById("socialPopup");
-  const popupBox = document.getElementById("popupBox");
-  const closeBtn = document.getElementById("popupClose");
+  const popupOverlay = document.getElementById("socialPopup");
+  const popupClose = document.getElementById("popupClose");
 
-  // Popup aç (örnek: 2 saniye sonra)
+  /* Popup aç (örnek: 2 saniye sonra) */
   setTimeout(() => {
-    popup.style.display = "block";
+    popupOverlay.style.display = "block";
   }, 2000);
 
-  // Kapatma animasyonu
-  closeBtn.addEventListener("click", () => {
-    popupBox.classList.add("closing");
+  /* X butonuna basınca kapat */
+  popupClose.addEventListener("click", function () {
+    popupOverlay.style.display = "none";
+  });
 
-    setTimeout(() => {
-      popup.style.display = "none";
-      popupBox.classList.remove("closing");
-    }, 400);
+  /* ESC tuşuna basınca kapat */
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      popupOverlay.style.display = "none";
+    }
   });
 });
 </script>
