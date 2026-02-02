@@ -3521,32 +3521,54 @@ body > * {
   transform: scale(1.05);
 }
 
+/* Google’a Yorum Ekle Butonu */
+.google-review-btn {
+  background: #e0ba2c;       /* normal durum: altın sarısı */
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.google-review-btn:hover {
+  background: #caa61f;       /* hover durumu: koyu altın */
+}
+
+
 /* ===================================================
-   5. MÜŞTERİ YORUMLARI (ORİJİNAL – BOZULMA YOK)
+   5. MÜŞTERİ YORUMLARI
    =================================================== */
-.testimonials-area {
-  margin-top: 80px;
+.testimonials-area { margin-top: 80px; }
+
+.testimonials-slider-wrapper { 
+  overflow: hidden; 
+  width: 100%; 
+  margin-top: 40px; 
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.testimonials-slider {
+  display: flex;
   gap: 30px;
-  margin-top: 40px;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
-.testi-card {
+.testimonials-slider .testi-card {
+  flex: 0 0 300px;
   background: rgba(255,255,255,0.85);
   padding: 25px;
   border-radius: 15px;
   border: 1px solid #eee;
   text-align: left;
-  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* yorum ve isim hizası */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testi-card:hover {
+/* Hover efekti */
+.testimonials-slider .testi-card:hover {
+  transform: scale(1.08); /* biraz büyüme */
+  box-shadow: 0 0 25px 5px rgba(224,186,44,0.5); /* altın sarısı glow */
   background: #fff;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
 }
 
 .star-rating {
@@ -3560,13 +3582,21 @@ body > * {
   font-style: italic;
   color: #555;
   line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .testi-card strong {
   display: block;
-  margin-top: 15px;
   color: #e0ba2c;
+  margin-top: auto; /* her zaman alt kısımda */
 }
+
+/* Mobil uyumlu */
+@media (max-width: 768px) {
+  .testimonials-slider .testi-card { flex: 0 0 90%; }
+}
+
+
 
 /* ===================================================
    6. MOBİL (HIGHLIGHTS 2x2)

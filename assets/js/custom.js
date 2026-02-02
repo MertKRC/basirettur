@@ -225,17 +225,10 @@ document.addEventListener("DOMContentLoaded", function () {
 (() => {
   const wrapper = document.getElementById("reelsWrapper");
   const track = document.getElementById("reelsTrack");
-
   if (!wrapper || !track) return;
 
   const items = [...track.children];
-  let x = 0;
-  let velocity = 0;
-  let isDragging = false;
-  let lastX = 0;
-  let auto = true;
-  let raf = null;
-
+  let x = 0, velocity = 0, isDragging = false, lastX = 0, auto = true, raf = null;
   const GAP = 28;
   const itemW = () => items[0].offsetWidth + GAP;
   const totalW = () => itemW() * items.length;
@@ -248,63 +241,87 @@ document.addEventListener("DOMContentLoaded", function () {
   function setActiveItem() {
     const center = Math.abs(x) + wrapper.offsetWidth / 2;
     const index = Math.floor(center / itemW()) % items.length;
-
-    items.forEach((el, i) =>
-      el.classList.toggle("active", i === index)
-    );
+    items.forEach((el, i) => el.classList.toggle("active", i === index));
   }
 
   function animationLoop() {
     if (auto && !isDragging) x -= 0.5;
-
     x += velocity;
     velocity *= 0.85;
-
     resetPosition();
     track.style.transform = `translate3d(${x}px, 0, 0)`;
     setActiveItem();
-
     raf = requestAnimationFrame(animationLoop);
   }
 
-  function dragStart(clientX) {
-    isDragging = true;
-    lastX = clientX;
-    velocity = 0;
-  }
-
-  function dragMove(clientX) {
-    if (!isDragging) return;
-    const delta = clientX - lastX;
-    x += delta;
-    velocity = delta * 0.3;
-    lastX = clientX;
-  }
-
-  function dragEnd() {
-    isDragging = false;
-  }
+  function dragStart(clientX) { isDragging = true; lastX = clientX; velocity = 0; }
+  function dragMove(clientX) { if (!isDragging) return; const delta = clientX - lastX; x += delta; velocity = delta * 0.3; lastX = clientX; }
+  function dragEnd() { isDragging = false; }
 
   wrapper.addEventListener("mousedown", e => dragStart(e.clientX));
   window.addEventListener("mousemove", e => dragMove(e.clientX));
   window.addEventListener("mouseup", dragEnd);
-
   wrapper.addEventListener("mouseenter", () => auto = false);
   wrapper.addEventListener("mouseleave", () => auto = true);
 
   new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !raf) {
-      animationLoop();
-    } else {
-      cancelAnimationFrame(raf);
-      raf = null;
-    }
+    if (entries[0].isIntersecting && !raf) animationLoop();
+    else { cancelAnimationFrame(raf); raf = null; }
   }, { threshold: 0.4 }).observe(wrapper);
 })();
 
+/* =========================================================
+   5️⃣ MÜŞTERİ YORUMLARI SLIDER
+   - Otomatik akar
+   - Mouse ile sürüklenebilir
+   - Hover’da durur ve sürükleme devre dışı
+   ========================================================= */
+(() => {
+  const slider = document.querySelector(".testimonials-slider");
+  if (!slider) return;
+
+  const cards = [...slider.children];
+  let x = 0, velocity = 0.5, raf, isDragging = false, isPaused = false;
+
+  function loop() {
+    if (!isPaused && !isDragging) {
+      x -= velocity;
+      const totalWidth = cards.reduce((sum, c) => sum + c.offsetWidth + 30, 0);
+      if (Math.abs(x) >= totalWidth) x = 0;
+      slider.style.transform = `translateX(${x}px)`;
+    }
+    raf = requestAnimationFrame(loop);
+  }
+
+  loop();
+
+  // Mouse ile sürükleme
+  let startX = 0;
+  slider.parentElement.addEventListener("mousedown", e => {
+    if (isPaused) return; // hover sırasında sürüklemeyi devre dışı bırak
+    isDragging = true;
+    startX = e.clientX;
+    cancelAnimationFrame(raf);
+  });
+  window.addEventListener("mousemove", e => {
+    if (!isDragging || isPaused) return;
+    const dx = e.clientX - startX;
+    x += dx;
+    startX = e.clientX;
+    slider.style.transform = `translateX(${x}px)`;
+  });
+  window.addEventListener("mouseup", () => {
+    if (!isDragging) return;
+    isDragging = false;
+  });
+
+  // Hover sırasında slider durur
+  slider.addEventListener("mouseenter", () => isPaused = true);
+  slider.addEventListener("mouseleave", () => isPaused = false);
+})();
 
 /* =========================================================
-   5️⃣ MOBİL MENÜ
+   6️⃣ MOBİL MENÜ
    - Menü linkine basınca menüyü kapat
    ========================================================= */
 document.addEventListener("DOMContentLoaded", function () {
@@ -316,13 +333,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
-
-      // Menü açıksa kapat
       if (menuTrigger.classList.contains("active")) {
         menuTrigger.classList.remove("active");
         nav.style.display = "none";
       }
-
     });
   });
 });
