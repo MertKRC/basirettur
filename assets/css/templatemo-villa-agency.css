@@ -1253,9 +1253,10 @@ Best Deal Style
   color: #a5a6a5;
 }
 
-#hizmetler, #turlar, #iletisim {
+#hizmetler, #turlar, #iletisim, #umre-adimlari, #instagram-section, #sss-section {
   scroll-margin-top: 100px; /* navbar yüksekliğine göre ayarla */
 }
+
 
 #mainImage {
   border-radius: 15px;
@@ -2825,6 +2826,7 @@ body {
   }
 }
 
+
 /* ============================= */
 /* GLOBAL GIRIH LINE PATTERN     */
 /* ============================= */
@@ -3139,6 +3141,7 @@ body > * {
   text-align: center !important; /* Başlık içeriğini ortala */
 }
 
+
 /* SSS Bölümü */
 #sss-section {
   padding: 60px 0;
@@ -3169,10 +3172,9 @@ body > * {
   margin-bottom: 18px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
-/* 🔥 Umre Adımları ile birebir hover */
+/* Hover */
 .sss-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
@@ -3192,12 +3194,6 @@ body > * {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  transition: color 0.3s ease; /* 🔹 EKLENDİ */
-}
-
-/* 🔹 Hover olunca başlık altın sarısı */
-.sss-card:hover .sss-question {
-  color: #e0ba2c;
 }
 
 /* Icon */
@@ -3223,22 +3219,15 @@ body > * {
 
 /* Aktif */
 .sss-card.active .sss-answer {
-  max-height: 350px;
+  max-height: 600px; /* güvenli */
 }
 
 .sss-card.active .sss-icon {
   transform: rotate(45deg);
 }
 
-/* 🔹 Açık olan soru başlığı da altın sarısı */
 .sss-card.active .sss-question {
   color: #e0ba2c;
-}
-
-/* Highlight */
-#sss-section .highlight {
-  color: #e0ba2c;
-  font-weight: 600;
 }
 
 /* Responsive */
@@ -3247,6 +3236,8 @@ body > * {
     font-size: 16px;
   }
 }
+
+
 
 /* ============================= */
 /* SOSYAL MEDYA POPUP – FINAL */
@@ -3404,5 +3395,199 @@ body > * {
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ===================================================
+   1. ANA BÖLÜM
+   =================================================== */
+.instagram-section {
+  padding: 80px 0;
+  background: transparent;
+}
+
+.instagram-desc {
+  text-align: center;
+  color: #555;
+  margin-bottom: 45px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* ===================================================
+   2. HIGHLIGHTS
+   =================================================== */
+.insta-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.highlight-item {
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.highlight-item img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  outline: 4px solid #d62976;
+  object-fit: cover;
+}
+
+.highlight-item span {
+  background: rgba(224,186,44,0.95);
+  color: #fff;
+  padding: 6px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===================================================
+   3. REELS (HIGHLIGHT YOK – HERKES AYNI)
+   =================================================== */
+.reels-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reels-track {
+  display: flex;
+  gap: 28px;
+  will-change: transform;
+}
+
+.reel-item {
+  flex: 0 0 280px;
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  opacity: 1;
+}
+
+.reel-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-item span {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ===================================================
+   4. INSTAGRAM CTA
+   =================================================== */
+.instagram-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-link {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.cta-link:hover {
+  transform: scale(1.05);
+}
+
+/* ===================================================
+   5. MÜŞTERİ YORUMLARI (ORİJİNAL – BOZULMA YOK)
+   =================================================== */
+.testimonials-area {
+  margin-top: 80px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testi-card {
+  background: rgba(255,255,255,0.85);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.testi-card:hover {
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+
+.star-rating {
+  color: #ffc107;
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.testi-card p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+}
+
+.testi-card strong {
+  display: block;
+  margin-top: 15px;
+  color: #e0ba2c;
+}
+
+/* ===================================================
+   6. MOBİL (HIGHLIGHTS 2x2)
+   =================================================== */
+@media (max-width: 768px) {
+
+  .insta-highlights {
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .highlight-item {
+    width: calc(50% - 12px); /* 2 üstte 2 altta */
+  }
+
+  .highlight-item img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .reel-item {
+    flex: 0 0 240px;
   }
 }
